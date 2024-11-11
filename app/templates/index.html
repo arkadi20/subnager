@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>subnager</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000000; /* Темно-серый фон */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Arial', sans-serif; /* Выбран шрифт Arial */
+            color: #ffffff;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            margin: 20px;
+            width: 350px;
+            text-align: center;
+            transition: transform 0.3s ease; /* Добавлена анимация для hover */
+        }
+
+        .container:hover {
+            transform: translateY(-5px); /* При наведении курсора поднимаем контейнер */
+            box-shadow: 0 8px 30px rgba(255, 255, 255, 0.3); /* Усиливаем тень при наведении */
+        }
+
+        .image {
+            width: 100%;
+            max-height: 200px; /* Фиксированная высота для изображения */
+            object-fit: cover;
+            margin-bottom: 15px;
+            border-radius: 10px; /* Скругление углов изображения */
+        }
+
+        .description {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        .link {
+            background-color: #007bff; /* Синий цвет для кнопки */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease; /* Добавлена анимация для hover */
+        }
+
+        .link:hover {
+            background-color: #0056b3; /* Темнее синий при наведении */
+            cursor: pointer;
+        }
+
+        .quit-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #dc3545; /* Красный цвет для кнопки */
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease; /* Добавлена анимация для hover */
+        }
+
+        .quit-button:hover {
+            background-color: #c82333; /* Темнее красный при наведении */
+            cursor: pointer;
+        }
+
+        .search-bar {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        .search-bar input {
+            background: none;
+            border: none;
+            padding: 0 10px;
+            font-size: 16px;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-bar">
+        <input type="text" placeholder="Поиск подписки..." id="search-input">
+    </div>
+    <a href="/quit" class="quit-button">Отказаться от подписки</a>
+
+    <div class="container">
+        <img src="../image/yandex.png" alt="Яндекс подписка плюс" class="image">
+        <div class="description">
+            Яндекс подписка плюс
+        </div>
+        <a href="https://plus.yandex.ru/" class="link">Перейти к подписке Яндекс</a>
+    </div>
+
+    <div class="container">
+        <img src="../image/IvI.png" alt="Иви" class="image">
+        <div class="description">
+            Онлайн кинотеатр иви
+        </div>
+        <a href="https://www.ivi.ru/" class="link">Перейти к подписке ИВИ</a>
+    </div>
+
+    <div class="container">
+        <img src="../image/mts.png" alt="мтс премиум" class="image">
+        <div class="description">
+            мтс премиум
+        </div>
+        <a href="https://premium.mts.ru/" class="link">Перейти к подписке мтс премиум</a>
+    </div>
+
+    <div class="container">
+        <img src="../image/TG.png" alt="" class="image">
+        <div class="description">
+            Телеграм премиум
+        </div>
+        <a href="https://t.me/PremiumRussia" class="link">Перейти к подписки ТГ премиум </a>
+    </div>
+
+    <div class="container">
+        <img src="../image/sber.png" alt="Описание картинки 5" class="image">
+        <div class="description">
+            сбер прайм.
+        </div>
+        <a href="
+            https://www.sberbank.com/sberprime" class="link">Перейти к подписке сбер прайм </a>
+    </div>
+    <div class="container">
+        <img src="../image/Start.png" alt="Описание картинки 5" class="image">
+        <div class="description">
+            подписка на кинотеатр СТАРТ
+        </div>
+        <a href="https://start.ru/auth" class='link'>Перейти к подписке Старт </a>
+    </div>
+    <div class="container">
+        <img src="../image/premier.png" alt="Описание картинки 5" class="image">
+        <div class="description">
+            онлайн кинотиатор premier
+        </div>
+        <a href="https://premier.one/" class="link">Перейти к подписке primer </a>
+    </div>
+    <div class="container">
+        <img src="../image/Wink.png" class="image">
+        <div class="description">
+            Онлайн кинотеаотр Wink
+        </div>
+        <a href="https://wink.ru/music-buy" class="link">Перейти к подпискам Wink</a>
+    </div>
+    <div class="container">
+        <img src="../image/Mybook.jpeg" alt="Описание картинки 5" class="image">
+        <div class="description">
+            Сервес для чтения книг Mybook
+        </div>
+        <a href="
+            https://mtbook.ru/payments/" class="link">Перейти к подписке Mybook </a>
+    </div>
+
+</body>
+    <script>
+        const searchInput = document.getElementById('search-input');
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const containers = document.querySelectorAll('.container');
+
+            containers.forEach(container => {
+                const description = container.querySelector('.description').textContent.toLowerCase();
+                if (description.includes(searchTerm)) {
+                    container.style.display = 'block';
+                } else {
+                    container.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</html>
